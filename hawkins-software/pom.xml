@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.hawkinssoftware</groupId>
+	<artifactId>hawkins-software</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<name>HawkinsSoftware company POM</name>
+	<description>Parent POM for all HawkinsSoftware projects.</description>
+	<url>http://www.hawkinssoftware.net</url>
+
+	<developers>
+		<developer>
+			<id>byron-hawkins</id>
+			<name>Byron Hawkins</name>
+			<organization>HawkinsSoftware</organization>
+			<organizationUrl>http://www.hawkinssoftware.net</organizationUrl>
+			<email>byron@hawkinssoftware.net</email>
+		</developer>
+	</developers>
+
+	<properties>
+		<domain-name>org.hawkinssoftware</domain-name>
+		<repository-username>byron-hawkins</repository-username>
+		<repository-name>${domain-name}.${project.artifactId}.git</repository-name>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>apache-nexus</id>
+			<name>Apache Nexus</name>
+			<url>https://repository.apache.org/content/repositories/snapshots/</url>
+		</repository>
+	</repositories>
+
+	<scm>
+		<connection>scm:git:git@github.com:${repository-username}/${repository-name}</connection>
+		<url>scm:git:git@github.com:${repository-username}/${repository-name}</url>
+		<developerConnection>scm:git:git@github.com:${repository-username}/${repository-name}</developerConnection>
+	</scm>
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+</project>
