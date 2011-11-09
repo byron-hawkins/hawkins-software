@@ -59,12 +59,14 @@
 		</dependency>
 	</dependencies>
 
+	<modules>
+		<module>../../platform/hawkins-software-platform</module>
+	</modules>
+
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
 	</parent>
-	<modules>
-		<module>../../platform/hawkins-software-platform</module>
-	</modules>
+
 </project>
